@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:blue": "node dist/blue/server/server.mjs",
-    "serve:ssr:green": "node dist/green/server/server.mjs"
+    "serve:ssr:green": "node dist/green/server/server.mjs",
+    "prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\""
   },
   "prettier": {
     "printWidth": 100,
@@ -56,6 +58,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^20.2.0",
+    "prettier": "^3.6.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }

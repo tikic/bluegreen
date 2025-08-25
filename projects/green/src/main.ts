@@ -6,5 +6,4 @@ import outputs from '../../../amplify_outputs.json';
 
 Amplify.configure(outputs);
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(App, appConfig).catch((err) => console.error(err));

@@ -26,9 +26,7 @@
                 "input": "projects/blue/public"
               }
             ],
-            "styles": [
-              "projects/blue/src/styles.scss"
-            ],
+            "styles": ["projects/blue/src/styles.scss"],
             "server": "projects/blue/src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -85,9 +83,7 @@
                 "input": "projects/blue/public"
               }
             ],
-            "styles": [
-              "projects/blue/src/styles.scss"
-            ]
+            "styles": ["projects/blue/src/styles.scss"]
           }
         }
       }
@@ -115,9 +111,7 @@
                 "input": "projects/green/public"
               }
             ],
-            "styles": [
-              "projects/green/src/styles.scss"
-            ],
+            "styles": ["projects/green/src/styles.scss"],
             "server": "projects/green/src/main.server.ts",
             "outputMode": "server",
             "ssr": {
@@ -174,9 +168,7 @@
                 "input": "projects/green/public"
               }
             ],
-            "styles": [
-              "projects/green/src/styles.scss"
-            ]
+            "styles": ["projects/green/src/styles.scss"]
           }
         }
       }
