@@ -1,2 +1,49 @@
-<div>Green app</div>
-<button (click)="login()">Sign in</button>
+<div class="flex min-h-dvh">
+  <aside class="w-64 bg-gray-100 shadow flex flex-col justify-between">
+    <div>
+      <div class="flex items-center gap-3 p-4 border-b">
+        <div
+          class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white font-bold"
+        >
+          G
+        </div>
+        <span class="text-xl font-semibold text-gray-800">Green App</span>
+      </div>
+
+      <nav class="p-4" aria-label="Primary">
+        <ul class="flex flex-col gap-2">
+          @for (item of navItems; track item.route) {
+            <li>
+              <a
+                [routerLink]="item.route"
+                [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+                routerLinkActive="bg-gray-200 text-gray-900"
+                #rla="routerLinkActive"
+                class="group flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 text-gray-700 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
+                [attr.aria-current]="rla.isActive ? 'page' : null"
+                [attr.title]="item.label"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <div class="p-4 border-t">
+      <button
+        type="button"
+        (click)="logout()"
+        class="flex items-center gap-2 w-full text-left px-3 py-2 rounded-md hover:bg-gray-100 text-gray-600 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
+        aria-label="Sign out"
+      >
+        Logout
+      </button>
+    </div>
+  </aside>
+
+  <main class="flex-1 p-6 overflow-y-auto">
+    <router-outlet></router-outlet>
+  </main>
+</div>

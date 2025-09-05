@@ -1,0 +1,33 @@
+<h2 class="text-xl font-bold mb-6">Dashboard</h2>
+
+@if (isLoading() && !error()) {
+  <div class="grid w-full min-h-[40vh] place-items-center">
+    <div class="inline-flex items-center gap-3 text-gray-600" role="status" aria-live="polite">
+      <span
+        class="h-8 w-8 inline-block rounded-full border-4 border-gray-300 border-t-transparent animate-spin"
+      ></span>
+      <span class="sr-only">Loading panels…</span>
+    </div>
+  </div>
+}
+
+@if (error()) {
+  <div class="text-red-600">{{ error() }}</div>
+}
+
+@if (panelsCount() > 0) {
+  <!-- KPI cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    <ui-kpi-card label="Total Power" [value]="totalPower()" unit="kW" color="blue"></ui-kpi-card>
+    <ui-kpi-card
+      label="Daily Energy"
+      [value]="dailyEnergy()"
+      unit="kWh"
+      color="yellow"
+    ></ui-kpi-card>
+    <ui-kpi-card label="Number of Panels" [value]="panelsCount()" color="green"></ui-kpi-card>
+  </div>
+
+  <!-- Table with panels -->
+  <app-panel-list [panels]="panels()"></app-panel-list>
+}
