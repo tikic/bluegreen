@@ -1,12 +1,11 @@
 {
-  "name": "ui",
-  "version": "0.0.1",
+  "name": "@demo/ui",
+  "version": "0.1.0",
+  "description": "Demo UI components",
+  "author": "TG",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^20.2.0",
     "@angular/core": "^20.2.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
-  "sideEffects": false
+  }
 }

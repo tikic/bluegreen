@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Panel } from '../panels.model';
-import { BadgeComponent } from 'ui';
+import { BadgeComponent } from '@demo/ui';
 import moment from 'moment';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, computed, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { KpiCardComponent } from 'ui';
+import { KpiCardComponent } from '@demo/ui';
 import { PanelService } from './panels.service';
 import { PanelListComponent } from './panel-list/panel-list';
 import { Panel } from './panels.model';

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { signInWithRedirect, fetchAuthSession, signOut } from 'aws-amplify/auth';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { NgClass } from '@angular/common';
 
 type NavItem = { label: string; route: string; icon: string; exact?: boolean };
 
@@ -9,7 +8,7 @@ type NavItem = { label: string; route: string; icon: string; exact?: boolean };
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, NgClass],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   styleUrl: './app.scss',
 })
 export class App implements OnInit {
@@ -19,13 +18,13 @@ export class App implements OnInit {
   ];
 
   async ngOnInit() {
-    try {
-      const session = await fetchAuthSession();
-      if (!session.tokens?.idToken) await signInWithRedirect();
-      console.log('[GREEN] session:', session);
-    } catch (e) {
-      console.error('[GREEN] auth error:', e);
-    }
+    // try {
+    //   const session = await fetchAuthSession();
+    //   if (!session.tokens?.idToken) await signInWithRedirect();
+    //   console.log('[GREEN] session:', session);
+    // } catch (e) {
+    //   console.error('[GREEN] auth error:', e);
+    // }
   }
 
   async logout() {
