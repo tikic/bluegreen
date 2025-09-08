@@ -1,0 +1,590 @@
+{
+  "pipes": [],
+  "interfaces": [],
+  "injectables": [],
+  "guards": [],
+  "interceptors": [],
+  "classes": [],
+  "directives": [],
+  "components": [],
+  "modules": [],
+  "miscellaneous": {
+    "variables": [
+      {
+        "name": "AllColors",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: (args) => ({\n    imports: [KpiCardComponent],\n    template: `\n      <div class=\"grid grid-cols-1 md:grid-cols-4 gap-6\">\n        <ui-kpi-card [label]=\"'Total Power'\" [value]=\"12.3\" unit=\"kW\" color=\"blue\" />\n        <ui-kpi-card [label]=\"'Daily Energy'\" [value]=\"55\" unit=\"kWh\" color=\"green\" />\n        <ui-kpi-card [label]=\"'Panels'\" [value]=\"18\" color=\"yellow\" />\n        <ui-kpi-card [label]=\"'Alerts'\" [value]=\"3\" color=\"red\" />\n      </div>\n    `,\n  }),\n}"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{}"
+      },
+      {
+        "name": "Gallery",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    imports: [BadgeComponent],\n    template: `\n      <div class=\"flex flex-wrap gap-2\">\n        <ui-badge text=\"Pending\" color=\"gray\"></ui-badge>\n        <ui-badge text=\"Active\" color=\"green\"></ui-badge>\n        <ui-badge text=\"Error\" color=\"red\"></ui-badge>\n        <ui-badge text=\"Warning\" color=\"orange\"></ui-badge>\n        <ui-badge text=\"Info\" color=\"yellow\"></ui-badge>\n      </div>\n    `,\n  }),\n}"
+      },
+      {
+        "name": "Gray",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { text: 'Pending', color: 'gray' },\n}"
+      },
+      {
+        "name": "Green",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { text: 'Active', color: 'green' },\n}"
+      },
+      {
+        "name": "Green",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { color: 'green', label: 'Daily Energy', value: 55, unit: 'kWh' },\n}"
+      },
+      {
+        "name": "LongLabel",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: {\n    label: 'Total Power Generated Across All Sites (Last 24h)',\n    color: 'yellow',\n  },\n}"
+      },
+      {
+        "name": "meta",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Meta<BadgeComponent>",
+        "defaultValue": "{\n  title: 'UI/Badge',\n  component: BadgeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    text: { control: 'text' },\n    color: {\n      control: { type: 'inline-radio' },\n      options: ['gray', 'green', 'red', 'orange', 'yellow'],\n    },\n  },\n  args: {\n    text: 'Badge',\n    color: 'gray',\n  },\n}"
+      },
+      {
+        "name": "meta",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Meta<KpiCardComponent>",
+        "defaultValue": "{\n  title: 'UI/KPI Card',\n  component: KpiCardComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    label: { control: 'text' },\n    value: { control: 'number' },\n    unit: { control: 'text' },\n    color: {\n      control: { type: 'inline-radio' },\n      options: ['blue', 'green', 'yellow', 'red'],\n    },\n  },\n  args: {\n    label: 'Total Power',\n    value: 12.3,\n    unit: 'kW',\n    color: 'blue',\n  },\n}"
+      },
+      {
+        "name": "NoUnit",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: {\n    unit: '',\n  },\n}"
+      },
+      {
+        "name": "Orange",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { text: 'Warning', color: 'orange' },\n}"
+      },
+      {
+        "name": "preview",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/.storybook/preview.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Preview",
+        "defaultValue": "{\n  parameters: {\n    angular: { disableZone: true },\n    controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [provideZonelessChangeDetection()],\n    }),\n  ],\n}"
+      },
+      {
+        "name": "Red",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { text: 'Error', color: 'red' },\n}"
+      },
+      {
+        "name": "Red",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { color: 'red', label: 'Alerts', value: 3, unit: '' },\n}"
+      },
+      {
+        "name": "Yellow",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { text: 'Info', color: 'yellow' },\n}"
+      },
+      {
+        "name": "Yellow",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: { color: 'yellow', label: 'Panels', value: 18, unit: '' },\n}"
+      }
+    ],
+    "functions": [],
+    "typealiases": [
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<BadgeComponent>",
+        "file": "projects/ui/src/lib/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<KpiCardComponent>",
+        "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      }
+    ],
+    "enumerations": [],
+    "groupedVariables": {
+      "projects/ui/src/lib/kpi-card/kpi-card.stories.ts": [
+        {
+          "name": "AllColors",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: (args) => ({\n    imports: [KpiCardComponent],\n    template: `\n      <div class=\"grid grid-cols-1 md:grid-cols-4 gap-6\">\n        <ui-kpi-card [label]=\"'Total Power'\" [value]=\"12.3\" unit=\"kW\" color=\"blue\" />\n        <ui-kpi-card [label]=\"'Daily Energy'\" [value]=\"55\" unit=\"kWh\" color=\"green\" />\n        <ui-kpi-card [label]=\"'Panels'\" [value]=\"18\" color=\"yellow\" />\n        <ui-kpi-card [label]=\"'Alerts'\" [value]=\"3\" color=\"red\" />\n      </div>\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{}"
+        },
+        {
+          "name": "Green",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { color: 'green', label: 'Daily Energy', value: 55, unit: 'kWh' },\n}"
+        },
+        {
+          "name": "LongLabel",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: {\n    label: 'Total Power Generated Across All Sites (Last 24h)',\n    color: 'yellow',\n  },\n}"
+        },
+        {
+          "name": "meta",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Meta<KpiCardComponent>",
+          "defaultValue": "{\n  title: 'UI/KPI Card',\n  component: KpiCardComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    label: { control: 'text' },\n    value: { control: 'number' },\n    unit: { control: 'text' },\n    color: {\n      control: { type: 'inline-radio' },\n      options: ['blue', 'green', 'yellow', 'red'],\n    },\n  },\n  args: {\n    label: 'Total Power',\n    value: 12.3,\n    unit: 'kW',\n    color: 'blue',\n  },\n}"
+        },
+        {
+          "name": "NoUnit",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: {\n    unit: '',\n  },\n}"
+        },
+        {
+          "name": "Red",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { color: 'red', label: 'Alerts', value: 3, unit: '' },\n}"
+        },
+        {
+          "name": "Yellow",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { color: 'yellow', label: 'Panels', value: 18, unit: '' },\n}"
+        }
+      ],
+      "projects/ui/src/lib/badge/badge.stories.ts": [
+        {
+          "name": "Gallery",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    imports: [BadgeComponent],\n    template: `\n      <div class=\"flex flex-wrap gap-2\">\n        <ui-badge text=\"Pending\" color=\"gray\"></ui-badge>\n        <ui-badge text=\"Active\" color=\"green\"></ui-badge>\n        <ui-badge text=\"Error\" color=\"red\"></ui-badge>\n        <ui-badge text=\"Warning\" color=\"orange\"></ui-badge>\n        <ui-badge text=\"Info\" color=\"yellow\"></ui-badge>\n      </div>\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Gray",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { text: 'Pending', color: 'gray' },\n}"
+        },
+        {
+          "name": "Green",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { text: 'Active', color: 'green' },\n}"
+        },
+        {
+          "name": "meta",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Meta<BadgeComponent>",
+          "defaultValue": "{\n  title: 'UI/Badge',\n  component: BadgeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    text: { control: 'text' },\n    color: {\n      control: { type: 'inline-radio' },\n      options: ['gray', 'green', 'red', 'orange', 'yellow'],\n    },\n  },\n  args: {\n    text: 'Badge',\n    color: 'gray',\n  },\n}"
+        },
+        {
+          "name": "Orange",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { text: 'Warning', color: 'orange' },\n}"
+        },
+        {
+          "name": "Red",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { text: 'Error', color: 'red' },\n}"
+        },
+        {
+          "name": "Yellow",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: { text: 'Info', color: 'yellow' },\n}"
+        }
+      ],
+      "projects/ui/.storybook/preview.ts": [
+        {
+          "name": "preview",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/ui/.storybook/preview.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Preview",
+          "defaultValue": "{\n  parameters: {\n    angular: { disableZone: true },\n    controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [provideZonelessChangeDetection()],\n    }),\n  ],\n}"
+        }
+      ]
+    },
+    "groupedFunctions": {},
+    "groupedEnumerations": {},
+    "groupedTypeAliases": {
+      "projects/ui/src/lib/badge/badge.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<BadgeComponent>",
+          "file": "projects/ui/src/lib/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
+      "projects/ui/src/lib/kpi-card/kpi-card.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<KpiCardComponent>",
+          "file": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ]
+    }
+  },
+  "routes": {
+    "name": "<root>",
+    "kind": "module",
+    "children": []
+  },
+  "coverage": {
+    "count": 0,
+    "status": "low",
+    "files": [
+      {
+        "filePath": "projects/ui/.storybook/preview.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "preview",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Gallery",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Gray",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Green",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "meta",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Orange",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Red",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Yellow",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/badge/badge.stories.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "Story",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "AllColors",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Green",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "LongLabel",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "meta",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "NoUnit",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Red",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Yellow",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/ui/src/lib/kpi-card/kpi-card.stories.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "Story",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      }
+    ]
+  }
+}

@@ -10,7 +10,13 @@
     "serve:ssr:blue": "node dist/blue/server/server.mjs",
     "serve:ssr:green": "node dist/green/server/server.mjs",
     "prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\"",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\""
+    "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\"",
+    "storybook": "ng run ui:storybook",
+    "build-storybook": "ng run ui:build-storybook",
+    "build:ui:ng": "ng build ui",
+    "build:ui:tw:sb": "tailwindcss -c tailwind.config.js -i projects/ui/src/styles.css -o projects/ui/.storybook/tw.css",
+    "build:ui:tw:dist": "tailwindcss -c tailwind.config.js -i projects/ui/src/styles.css -o dist/ui/styles.css",
+    "build:ui": "npm run build:ui:ng && npm run build:ui:tw:dist"
   },
   "prettier": {
     "printWidth": 100,
@@ -42,17 +48,25 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^20.2.2",
     "@angular/build": "^20.2.0",
     "@angular/cli": "^20.2.0",
     "@angular/compiler-cli": "^20.2.0",
     "@aws-amplify/backend": "^1.16.1",
     "@aws-amplify/backend-cli": "^1.8.0",
+    "@babel/runtime": "^7.28.4",
+    "@compodoc/compodoc": "^1.1.30",
+    "@storybook/addon-a11y": "^9.1.5",
+    "@storybook/addon-docs": "^9.1.5",
+    "@storybook/addon-styling-webpack": "^2.0.0",
+    "@storybook/angular": "^9.1.5",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
     "autoprefixer": "^10.4.21",
     "aws-cdk-lib": "^2.204.0",
     "constructs": "^10.4.2",
+    "css-loader": "^7.1.2",
     "esbuild": "^0.25.9",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
@@ -62,9 +76,13 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^20.2.0",
     "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
     "prettier": "^3.6.2",
+    "storybook": "^9.1.5",
+    "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "zone.js": "^0.15.1"
   }
 }
