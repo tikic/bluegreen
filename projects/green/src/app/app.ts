@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { signInWithRedirect, fetchAuthSession, signOut } from 'aws-amplify/auth';
+import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { AmplifyAuthService } from 'auth';
 
 type NavItem = { label: string; route: string; icon: string; exact?: boolean };
 
@@ -11,27 +11,15 @@ type NavItem = { label: string; route: string; icon: string; exact?: boolean };
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   styleUrl: './app.scss',
 })
-export class App implements OnInit {
+export class App {
+  constructor(private readonly auth: AmplifyAuthService) {}
+
   navItems: NavItem[] = [
     { label: 'Panels', route: '/panels', icon: 'panels', exact: true },
     { label: 'Analytics', route: '/analytics', icon: 'analytics' },
   ];
 
-  async ngOnInit() {
-    // try {
-    //   const session = await fetchAuthSession();
-    //   if (!session.tokens?.idToken) await signInWithRedirect();
-    //   console.log('[GREEN] session:', session);
-    // } catch (e) {
-    //   console.error('[GREEN] auth error:', e);
-    // }
-  }
-
   async logout() {
-    try {
-      await signOut();
-    } catch (e) {
-      console.error('[GREEN] signOut error:', e);
-    }
+    await this.auth.signOut();
   }
 }
